@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: laksh-ops
+    runtime: docker
+    plan: free
+    envVars:            # values are entered in the Render dashboard - never commit them
+      - key: HINDSIGHT_URL
+        value: https://api.hindsight.vectorize.io
+      - key: HINDSIGHT_API_KEY
+        sync: false
+      - key: LAKSH_ACCESS_TOKEN
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: LAKSH_REQUIRE_HINDSIGHT
+        value: "1"
+      - key: HINDSIGHT_BANK
+        value: laksh-sre-team
